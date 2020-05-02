@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+zuul:
+  routes:
+    v2-api:
+      path: /v2-api/**
+      serviceId: v2-api
+    v2-web:
+      path: /v2-web/**
+      serviceId: v2-web

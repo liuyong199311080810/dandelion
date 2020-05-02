@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: v2-api
+
+feign:
+  hystrix:
+    enabled: true
+
+
