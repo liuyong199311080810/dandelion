@@ -15,3 +15,4 @@ zuul:
     v2-web:
       path: /v2-web/**
       serviceId: v2-web
+

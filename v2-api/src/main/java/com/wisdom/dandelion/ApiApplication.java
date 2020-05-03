@@ -1,6 +1,5 @@
 package com.wisdom.dandelion;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -20,8 +19,8 @@ public class ApiApplication {
         SpringApplication.run( ApiApplication.class, args );
     }
 
-    @FeignClient(value = "service",fallback = SchedualServiceHiHystric.class)
-    public interface SchedualServiceHi {
+    @FeignClient(value = "service",fallback = SchedualServiceHystric.class)
+    public interface SchedualService {
         @RequestMapping(value = "/hi",method = RequestMethod.GET)
         String sayHiFromClientOne(@RequestParam(value = "name") String name);
     }
