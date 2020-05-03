@@ -1,4 +1,4 @@
-## springcloud微服务
+## JAVA版微服务
 
 ### eureka-server
 服务的注册与发现
@@ -19,4 +19,3 @@ https://dl.bintray.com/openzipkin/maven/io/zipkin/java/zipkin-server/
 也可以在这里https://github.com/forezp/SpringCloudLearning/tree/master/sc-f-chapter9 下载。下载完成jar 包之后，需要运行jar，如下：
 java -jar zipkin-server-2.10.1-exec.jar
 访问浏览器localhost:9494
-
