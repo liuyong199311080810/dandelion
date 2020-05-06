@@ -1,0 +1,51 @@
+version: '3'
+services:
+  eureka-server:
+    image: wisdom/eureka-server:latest
+    container_name: eureka-server
+    restart: always
+    hostname: eureka-server
+    networks:
+      - eureka-net
+    ports:
+      - 8761:8761
+
+  service:
+    image: wisdom/service:latest
+    container_name: service
+    restart: always
+    networks:
+      - eureka-net
+    ports:
+      - 9090:9090
+
+  v2-api:
+    image: wisdom/v2-api:latest
+    container_name: v2-api
+    restart: always
+    networks:
+      - eureka-net
+    ports:
+      - 8081:8081
+
+  v2-web:
+    image: wisdom/v2-web:latest
+    container_name: v2-web
+    restart: always
+    networks:
+      - eureka-net
+    ports:
+      - 8082:8082
+
+  gateway:
+    image: wisdom/gateway:latest
+    container_name: gateway
+    restart: always
+    networks:
+      - eureka-net
+    ports:
+      - 8080:8080
+
+networks:
+  eureka-net:
+    driver: bridge
