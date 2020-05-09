@@ -1,5 +1,7 @@
 package com.wisdom.dandelion;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,11 +18,14 @@ public class ServiceApplication {
         SpringApplication.run( ServiceApplication.class, args );
     }
 
+    private Logger logger = LoggerFactory.getLogger(ServiceApplication.class);
+
     @Value("${server.port}")
     String port;
 
     @RequestMapping("/hi")
     public String hi(@RequestParam(value = "name", defaultValue = "forezp") String name) {
+        logger.info("ELK测试");
         return "hi " + name + " ,i am from port:" + port;
     }
 
