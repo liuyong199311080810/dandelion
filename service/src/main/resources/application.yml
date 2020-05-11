@@ -9,3 +9,6 @@ server:
 spring:
   application:
     name: service
+
+logging:
+  config: classpath:logback-spring.xml

@@ -16,3 +16,6 @@ zuul:
       path: /v2-web/**
       serviceId: v2-web
 
+logging:
+  config: classpath:logback-spring.xml
+

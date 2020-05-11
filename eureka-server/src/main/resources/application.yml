@@ -13,3 +13,6 @@ eureka:
 spring:
   application:
     name: eureka-server
+logging:
+  level:
+    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
