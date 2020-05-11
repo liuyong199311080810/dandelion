@@ -4,7 +4,7 @@ eureka:
       defaultZone: http://eureka-server:8761/eureka/
 
 server:
-  port: 9090
+  port: 9091
 
 spring:
   application:

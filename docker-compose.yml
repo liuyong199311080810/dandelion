@@ -13,7 +13,7 @@ services:
     container_name: service
     restart: always
     ports:
-      - 9090:9090
+      - 9091:9091
 
   v2-api:
     image: wisdom/v2-api:latest
