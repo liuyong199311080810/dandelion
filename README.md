@@ -22,6 +22,8 @@ java -jar zipkin-server-2.10.1-exec.jar
 
 ### admin-server
 可以查看对应的服务以及JVM,WEB接口
+访问浏览器localhost:8769
+![wallboard](.\wallboard.png)
 
 ### 拓扑图
 
