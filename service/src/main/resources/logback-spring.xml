@@ -25,17 +25,17 @@
         </encoder>
     </appender>
 
-    <!-- 为logstash输出的JSON格式的Appender -->
-    <appender name="logstash"
-              class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>0.0.0.0:5000</destination>
-        <!-- 日志输出编码 -->
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
-    </appender>
+<!--    &lt;!&ndash; 为logstash输出的JSON格式的Appender &ndash;&gt;-->
+<!--    <appender name="logstash"-->
+<!--              class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
+<!--        <destination>0.0.0.0:5000</destination>-->
+<!--        &lt;!&ndash; 日志输出编码 &ndash;&gt;-->
+<!--        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>-->
+<!--    </appender>-->
 
     <!-- 日志输出级别 -->
     <root level="INFO">
         <appender-ref ref="console" />
-        <appender-ref ref="logstash" />
+<!--        <appender-ref ref="logstash" />-->
     </root>
 </configuration>

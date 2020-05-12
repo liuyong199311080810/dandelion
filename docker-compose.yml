@@ -1,10 +1,18 @@
 version: '3'
 services:
+
+  admin-server:
+    image: wisdom/admin-server:latest
+    container_name: admin-server
+    restart: always
+    ports:
+      - 8761:8761
+
   eureka-server:
     image: wisdom/eureka-server:latest
     container_name: eureka-server
     restart: always
-    hostname: eureka-server
+    hostname: localhost
     ports:
       - 8761:8761
 
@@ -37,6 +45,5 @@ services:
       - 8080:8080
 
 networks:
-  default:
-    external:
-      name: dockerelk_elk
+  dandelion:
+    driver: bridge

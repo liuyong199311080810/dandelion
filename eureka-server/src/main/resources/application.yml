@@ -4,15 +4,22 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    hostname: eureka-server
+    hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    registerWithEureka: false
+    fetchRegistry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
 spring:
   application:
     name: eureka-server
-logging:
-  level:
-    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN

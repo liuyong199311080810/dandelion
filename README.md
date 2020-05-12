@@ -20,6 +20,9 @@ https://dl.bintray.com/openzipkin/maven/io/zipkin/java/zipkin-server/
 java -jar zipkin-server-2.10.1-exec.jar
 访问浏览器localhost:9494
 
+### admin-server
+可以查看对应的服务以及JVM,WEB接口
+
 ### 拓扑图
 
 ![拓扑图](.\拓扑图.png)

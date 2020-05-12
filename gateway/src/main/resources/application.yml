@@ -1,12 +1,16 @@
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
   client:
     serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
 server:
   port: 8080
 spring:
   application:
     name: gateway
+
 zuul:
   routes:
     v2-api:
@@ -19,3 +23,11 @@ zuul:
 logging:
   config: classpath:logback-spring.xml
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
